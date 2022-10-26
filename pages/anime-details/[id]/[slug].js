@@ -29,6 +29,7 @@ export default function AnimeDetail() {
               src={`/images/${id}.jpeg`}
               width="479px"
               height="479px"
+              alt={item.title}
             />
           </div>
           <ul style={{ paddingLeft: "25px" }} className={styles.details}>

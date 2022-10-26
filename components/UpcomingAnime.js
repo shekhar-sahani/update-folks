@@ -22,8 +22,7 @@ export default function UpcomingAnime() {
             <div id={styles.output}>
               {/* Main Card Content Goes Here  */}
               {anime_data.map((item, index) => (
-                <div className={index % 2 == 0 ? `${styles.blog_card}` : `${styles.blog_card} ${styles.alt}`} >
-                  
+                <div key={index} className={index % 2 == 0 ? `${styles.blog_card}` : `${styles.blog_card} ${styles.alt}`} >
                 <div className={styles.meta} >
                   <div className={styles.photo}>
                     <Image alt={item.title} src={`/images/${index+1}.jpeg`} width='349px' height='345px' />
