@@ -14,8 +14,8 @@ export default function AnimeDetail() {
   return (
     <>
     <Head>
-        <title>{item.title} </title>
-        <meta name="description" content={item.desc} />
+        <title>{item?.title} </title>
+        <meta name="description" content={item?.desc} />
         <meta name="keyword" content="upcoming anime, upcoming anime 2023, upcoming anime january, new and upcoming anime, anime"></meta>
         <meta name="author" content="updatefolks" ></meta>
         <link rel="icon" href="/starlord.png" />
@@ -29,7 +29,7 @@ export default function AnimeDetail() {
               src={`/images/${id}.jpeg`}
               width="479px"
               height="479px"
-              alt={item.title}
+              alt={item?.title}
             />
           </div>
           <ul style={{ paddingLeft: "25px" }} className={styles.details}>

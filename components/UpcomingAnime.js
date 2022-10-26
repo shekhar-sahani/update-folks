@@ -13,7 +13,7 @@ export default function UpcomingAnime() {
         <div className={styles.content_wrapper}>
           <div className={styles.content}>
             <div className={styles.poster} style={{marginBottom: '4px'}}>
-          <Image src={'/animeposter1.webp'} width='828px' height='350px' />
+          <Image alt='banner_image' src={'/animeposter1.webp'} width='828px' height='350px' />
               <div className={styles.poster_title}>
                 <h1> Upcoming Anime </h1>
                 <div className={styles.line} />
