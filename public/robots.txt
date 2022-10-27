@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://updatefolks.link/
+
+# Sitemaps
+Sitemap: https://updatefolks.link/sitemap.xml
