@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/upcomingAnime.module.css'
 import Image from 'next/image'
-import { anime_data } from './anime_data'
+import { anime_winter_data } from './anime_winter_data'
 import Link from 'next/link'
 
 export default function UpcomingAnime() {
@@ -21,7 +21,7 @@ export default function UpcomingAnime() {
             </div>
             <div id={styles.output}>
               {/* Main Card Content Goes Here  */}
-              {anime_data.map((item, index) => (
+              {anime_winter_data.map((item, index) => (
                 <div key={index} className={index % 2 == 0 ? `${styles.blog_card}` : `${styles.blog_card} ${styles.alt}`} >
                 <div className={styles.meta} >
                   <div className={styles.photo}>

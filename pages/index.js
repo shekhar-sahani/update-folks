@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import AnimeWinter2023 from '../components/AnimeWinter2023'
 import UpcomingAnime from '../components/UpcomingAnime'
 import styles from '../styles/Home.module.css'
 
@@ -11,13 +12,15 @@ export default function Home() {
         <title>Upcoming Anime 2023 - Update Folks</title>
         <meta name="google-site-verification" content="pfzk24IbYS53h7fP868UIjlzjtUcIKxzeONE1BJPD8c" />
         <meta name="description" content="upcoming anime 2023 | anime airing in january 2023" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="keyword" content="upcoming anime, upcoming anime 2023, upcoming anime january, new and upcoming anime, anime"></meta>
         <meta name="author" content="updatefolks" ></meta>
         <link rel="icon" href="/starlord.png" />
       </Head>
 
       <main>
-      <UpcomingAnime />
+      {/* <UpcomingAnime /> */}
+      <AnimeWinter2023 />
      
         
 

@@ -1,4 +1,4 @@
-export const anime_data = [
+export const anime_winter_data = [
     {
         "title": "Vinland Saga Season 2",
         "image": "https://cdn.myanimelist.net/images/anime/1170/124312.jpg",
