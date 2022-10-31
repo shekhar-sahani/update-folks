@@ -14,12 +14,11 @@ export default function AnimeSpring2023() {
       {anime_spring_data.map((item, index) => (
         <div key={index}>
         <h3>{item.title}  </h3>
-        <img  alt='banner_image' src={`${item.image}`}  />
+        <img  alt='banner_image' src={`/images/spring_2023/${index+1}.webp`}  />
         <ul >
          <li><strong>Release Date:</strong>  {item.fall} </li>
          <li><strong>Description:</strong> {item.desc} </li>
         </ul>
-        
          </div>
       ))}
      </div>
@@ -27,7 +26,7 @@ export default function AnimeSpring2023() {
      <div className={styles.header} >
         <h3>Recommended</h3>
       </div>
-      {/* {cardData.map((item, index) => (
+      {cardData.map((item, index) => (
         <div key={index} >
       <div className={styles.card} >
         <div className={styles.card_img} >
@@ -40,7 +39,7 @@ export default function AnimeSpring2023() {
       </div>
      
         </div>
-      ))} */}
+      ))}
      </div>
     </div>
     </div>

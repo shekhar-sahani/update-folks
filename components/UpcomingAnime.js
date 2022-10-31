@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/upcomingAnime.module.css'
 import Image from 'next/image'
-import { anime_winter_data } from './anime_winter_data'
+import { anime_winter_data } from './constants/anime_winter_data'
 import Link from 'next/link'
 
 export default function UpcomingAnime() {

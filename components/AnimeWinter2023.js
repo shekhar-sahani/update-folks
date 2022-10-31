@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import styles from '../styles/AnimePage.module.css'
-import { anime_winter_data } from './anime_winter_data'
+import { anime_winter_data } from './constants/anime_winter_data'
 
 export default function AnimeWinter2023() {
   const mapData = [{},{},{}]
