@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import styles from "../../../styles/details.module.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { anime_data } from "../../../components/anime_data";
+import { anime_winter_data } from "../../../components/constants/anime_winter_data";
 export default function AnimeDetail() {
   const router = useRouter();
   const { id, slug } = router.query;
-  const [data, setData] = useState(anime_data);
+  const [data, setData] = useState(anime_winter_data);
   const item = data.filter((val) => val.title === slug)[0];
   console.log("item", item);
   return (
