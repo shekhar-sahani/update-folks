@@ -27,8 +27,8 @@ export default function AnimeSpring2023() {
      <div className={styles.header} >
         <h3>Recommended</h3>
       </div>
-      {cardData.map((item) => (
-        <div>
+      {/* {cardData.map((item, index) => (
+        <div key={index} >
       <div className={styles.card} >
         <div className={styles.card_img} >
         <img width='100%' src="https://cdn.animeukiyo.com/wp-content/uploads/2022/06/Classroom-of-the-Elite-Season-2-1.webp" alt="" />
@@ -40,7 +40,7 @@ export default function AnimeSpring2023() {
       </div>
      
         </div>
-      ))}
+      ))} */}
      </div>
     </div>
     </div>
