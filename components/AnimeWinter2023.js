@@ -11,7 +11,7 @@ export default function AnimeWinter2023() {
     <h1 className={styles.title} >List of 40+ Upcoming Anime Releases in Winter 2023 [With Release Dates & Updates] </h1>
     <div className={styles.wrapper} >
      <div className={styles.content} >
-      {/* {anime_winter_data.map((item, index) => (
+      {anime_winter_data.map((item, index) => (
         <div key={index} >
         <h3>{item.title}  </h3>
         <img  alt='banner_image' src={`/images/winter_2023/${index+1}.jpeg`}  />
@@ -21,14 +21,14 @@ export default function AnimeWinter2023() {
         </ul>
         
          </div>
-      ))} */}
+      ))}
      </div>
      <div className={styles.side_content} >
      <div className={styles.header} >
         <h3>Recommended</h3>
       </div>
-      {cardData.map((item) => (
-        <div>
+      {/* {cardData.map((item, index) => (
+        <div key={index}>
       <div className={styles.card} >
         <div className={styles.card_img} >
         <img width='100%' src="https://cdn.animeukiyo.com/wp-content/uploads/2022/06/Classroom-of-the-Elite-Season-2-1.webp" alt="" />
@@ -40,7 +40,7 @@ export default function AnimeWinter2023() {
       </div>
      
         </div>
-      ))}
+      ))} */}
      </div>
     </div>
     </div>
