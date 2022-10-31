@@ -12,7 +12,7 @@ export default function AnimeSpring2023() {
     <div className={styles.wrapper} >
      <div className={styles.content} >
       {anime_spring_data.map((item, index) => (
-        <div>
+        <div key={index}>
         <h3>{item.title}  </h3>
         <img  alt='banner_image' src={`${item.image}`}  />
         <ul >
