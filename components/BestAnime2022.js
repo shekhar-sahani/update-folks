@@ -2,22 +2,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/AnimePage.module.css'
-import { anime_winter_data } from './constants/anime_winter_data'
+import { best_anime_2022 } from './constants/best_anime_2022'
 
-export default function AnimeWinter2023() {
+export default function BestAnime2022() {
   const mapData = [{},{},{}]
   const cardData = [{}, {}, {}, {}, {}]
   return (
     <div className={styles.page} > 
-    <h1 className={styles.title} >List of 40+ Upcoming Anime Releases in Winter 2023 [With Release Dates & Updates] </h1>
+    <h1 className={styles.title} >List of 10 Best Anime Series to Watch in 2022  </h1>
     <div className={styles.wrapper} >
      <div className={styles.content} >
-      {anime_winter_data.map((item, index) => (
+      {best_anime_2022.map((item, index) => (
         <div key={index} >
-        <h3>{item.title}  </h3>
-        <img  alt='banner_image' src={`/images/winter_2023/${index+1}.jpeg`}  />
+        <h3> {index+1}. {item.title}  </h3>
+        <img  alt='banner_image' src={`/images/best_2022/${item.img}`}  />
         <ul >
-         <li><strong>Release Date:</strong>  {item.fall} </li>
+         <li><strong>Season:</strong>  {item.fall} </li>
          <li><strong>Description:</strong> {item.desc} </li>
         </ul>
         
