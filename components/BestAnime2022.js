@@ -6,7 +6,22 @@ import { best_anime_2022 } from './constants/best_anime_2022'
 
 export default function BestAnime2022() {
   const mapData = [{},{},{}]
-  const cardData = [{}, {}, {}, {}, {}]
+  const cardData = [
+    {
+      title: "List of 40+ Upcoming Anime Releases in Winter",
+      date: "2023",
+      link: "/anime/winter/2023",
+      img: 'upcoming-anime-winter-2023.jpg',
+      alt: 'upcoming anime winter 2023'
+    },
+    {
+      title: "List of 10+ Upcoming Anime Releases in Spring",
+      date: "2022",
+      link: "/",
+      img:'upcoming-anime-spring-2023.jpg',
+      alt: 'upcoming anime spring 2023'
+    },
+  ];
   return (
     <div className={styles.page} > 
     <h1 className={styles.title} >List of 10 Best Anime Series to Watch in 2022  </h1>
@@ -30,17 +45,24 @@ export default function BestAnime2022() {
       </div>
       {cardData.map((item, index) => (
         <div key={index}>
-      <div className={styles.card} >
-        <div className={styles.card_img} >
-        <img width='100%' src="https://cdn.animeukiyo.com/wp-content/uploads/2022/06/Classroom-of-the-Elite-Season-2-1.webp" alt="" />
-        </div>
-       <div className={styles.card_text} >
-          <p> <Link href='/anime/spring/2023' >List of 10+ Upcoming Anime Releases in spring! </Link></p>
-          <span  > JULY 17, 2022</span>
+        <div className={styles.card}>
+          <div className={styles.card_img}>
+            <img
+              width="100%"
+              src={`/images/recommended/${item.img}`}
+              alt={item.alt}
+            />
+          </div>
+          <div className={styles.card_text}>
+          <Link href={item.link}>
+            <p>
+              {item.title} 
+            </p>
+            </Link>
+            <span> {item.date}</span>
+          </div>
         </div>
       </div>
-     
-        </div>
       ))}
      </div>
     </div>

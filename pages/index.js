@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import AnimeSpring2023 from '../components/AnimeSpring2023'
 import AnimeWinter2023 from '../components/AnimeWinter2023'
 import UpcomingAnime from '../components/UpcomingAnime'
 import styles from '../styles/Home.module.css'
@@ -20,7 +21,8 @@ export default function Home() {
 
       <main>
       {/* <UpcomingAnime /> */}
-      <AnimeWinter2023 />
+      {/* <AnimeWinter2023 /> */}
+      <AnimeSpring2023 />
      
         
 
