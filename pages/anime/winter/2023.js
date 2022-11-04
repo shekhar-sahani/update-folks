@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimeWinter2023 from '../../../components/AnimeWinter2023'
+import Head from 'next/head'
 
 export default function AnimeSpring() {
   return (

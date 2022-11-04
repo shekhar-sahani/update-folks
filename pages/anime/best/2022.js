@@ -1,5 +1,6 @@
 import React from 'react'
 import BestAnime2022 from '../../../components/BestAnime2022'
+import Head from 'next/head'
 
 export default function BestAnime() {
   return (
