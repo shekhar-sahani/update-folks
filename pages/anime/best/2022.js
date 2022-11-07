@@ -6,6 +6,8 @@ export default function BestAnime() {
   return (
     <>
     <Head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3286643574534343"
+     crossorigin="anonymous"></script>
         <title>Anime Spring 2023 - Update Folks</title>
         <meta name="google-site-verification" content="pfzk24IbYS53h7fP868UIjlzjtUcIKxzeONE1BJPD8c" />
         <meta name="description" content="upcoming anime 2023 | anime airing in spring 2023" />

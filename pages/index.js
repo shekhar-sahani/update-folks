@@ -7,6 +7,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3286643574534343"
+     crossorigin="anonymous"></script>
         <title>Upcoming Anime 2023 - Update Folks</title>
         <meta name="google-site-verification" content="pfzk24IbYS53h7fP868UIjlzjtUcIKxzeONE1BJPD8c" />
         <meta name="description" content="upcoming anime 2023 | anime airing in january 2023" />
