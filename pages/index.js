@@ -21,10 +21,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
-        </style>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3286643574534343"
@@ -51,54 +47,30 @@ export default function Home() {
         <link rel="icon" href="/starlord.png" />
       </Head>
 
-      <main style={{ backgroundColor: "#282c34" }}>
+      <main>
         <div className={styles.page}>
           <div>
-            <div>
-              <img
-                style={{
-                  width: "100%",
-                  height: "600px",
-                  objectFit: "cover",
-                  opacity: "0.6",
-                  
-                }}
-                src="../images/banner_2023/anime_2.jpg"
-                alt=""
-              />
+            <ul style={{listStyle:'none'}} >
+              <li >Update Folks</li>
+            </ul>
+          </div>
+          <div>
+            <div style={{position:'relative', height:'300px'}} >
+              <div  className={styles.content} >
               <h2
-                style={{
-                  fontSize: "55px",
-                  // opacity: "0.8",
-                  position: "relative",
-                  bottom: "390px",
-                  textAlign: "center",
-                  color: "white",
-                  fontFamily: "Yeon Sung",
-                }}
-                className={styles.title}
               >
-                
                 Welcome To Update Folks
               </h2>
-              {/* <p
+              <p
                 style={{
-                  fontSize: "35px",
-                  // opacity: "0.8",
                   position: "relative",
-                  bottom: "370px",
                   textAlign: "center",
-                  color: "white",
-                  fontFamily: "Yeon Sung",
-                  width:"70%",
-                  left:"10%"
+                  fontSize:'25px'
                 }}
               >
-                Wikipedia is a free online encyclopedia, created and edited by
-                volunteers around the world and hosted by the Wikimedia
-                Foundation.
+                Feel Free To View This Amazing Posts
               </p>
-       */}
+              </div>
             </div>
           </div>
           <div className={styles.wrapper}>
