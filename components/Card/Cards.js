@@ -9,8 +9,9 @@ import Link from 'next/link';
 
 export default function Cards({item}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card  sx={{ maxWidth: 345  }}>
     <CardMedia
+    
       component="img"
       alt="green iguana"
       height="140"
