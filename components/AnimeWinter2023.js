@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "../styles/AnimePage.module.css";
 import { anime_winter_data } from "./constants/anime_winter_data";
+import { API_URL } from "./constants/constant";
 
 export default function AnimeWinter2023() {
   const mapData = [{}, {}, {}];
@@ -22,6 +23,17 @@ export default function AnimeWinter2023() {
       alt: 'best anime 2022'
     },
   ];
+  const [data, setData] = useState([]);
+  const fetchData = () => {
+    fetch(API_URL + "/post-data/anime-winter-2023")
+      .then((res) => res.json())
+      .then((data) => setData(data['post_data']));
+  };
+  console.log('da', data)
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div className={styles.page}>
       <h1 className={styles.title}>
@@ -30,12 +42,13 @@ export default function AnimeWinter2023() {
       </h1>
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          {anime_winter_data.map((item, index) => (
+          {data.map((item, index) => (
             <div key={index}>
               <h3>{item.title} </h3>
               <img
                 alt="banner_image"
-                src={`/images/winter_2023/${index + 1}.jpeg`}
+                // src={`/images/winter_2023/${index + 1}.jpeg`}
+                src={item.image}
               />
               <ul>
                 <li>

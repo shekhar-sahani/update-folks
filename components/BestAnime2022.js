@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from '../styles/AnimePage.module.css'
 import { best_anime_2022 } from './constants/best_anime_2022'
-
+import { API_URL } from './constants/constant'
 export default function BestAnime2022() {
   const mapData = [{},{},{}]
   const cardData = [
@@ -22,15 +22,29 @@ export default function BestAnime2022() {
       alt: 'upcoming anime spring 2023'
     },
   ];
+  const [data, setData] = useState([]);
+  const fetchData = () => {
+    fetch(API_URL + "/post-data/anime-best-2022")
+      .then((res) => res.json())
+      .then((data) => setData(data['post_data']));
+  };
+  console.log('da', data)
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div className={styles.page} > 
     <h1 className={styles.title} >List of 10 Best Anime Series to Watch in 2022  </h1>
     <div className={styles.wrapper} >
      <div className={styles.content} >
-      {best_anime_2022.map((item, index) => (
+      {data.map((item, index) => (
         <div key={index} >
         <h3> {index+1}. {item.title}  </h3>
-        <img  alt='banner_image' src={`/images/best_2022/${item.img}`}  />
+        <img  alt='banner_image'
+        //  src={`/images/best_2022/${item.img}`}  
+        src={item.img}
+         />
         <ul >
          <li><strong>Season:</strong>  {item.fall} </li>
          <li><strong>Description:</strong> {item.desc} </li>

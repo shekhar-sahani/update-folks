@@ -1,9 +1,23 @@
 import Head from 'next/head'
-import AnimeSpring2023 from '../components/AnimeSpring2023'
+// import AnimeSpring2023 from '../components/AnimeSpring2023'
+import Cards from '../components/Card/Cards'
 import styles from '../styles/Home.module.css'
-
+import { useState, useEffect } from 'react'
+import { API_URL } from '../components/constants/constant'
 
 export default function Home() {
+
+  const [data, setData] = useState([]);
+  const fetchData = () => {
+    fetch(API_URL + "/all/posts")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  };
+  // console.log('da', data)
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +33,17 @@ export default function Home() {
       </Head>
 
       <main>
-      <AnimeSpring2023 />
+       <div className={styles.page} >
+       <h2 className={styles.title} >Welcome To Update Folks</h2>
+        <div className={styles.wrapper} >
+        <div style={{display:'flex', justifyContent:'space-around', flexWrap:'wrap'}} >
+        {data.map((item, id) => (
+            <Cards key={id} item={item} />
+            ))}
+            </div>
+        </div>
+       </div>
+        
       </main>
     </div>
   )
