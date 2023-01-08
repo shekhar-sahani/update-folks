@@ -6,13 +6,14 @@ import { useState, useEffect } from "react";
 import { margin } from "@mui/system";
 import { api_url } from "../components/constants/constant";
 import Nav from "../components/Navbar/Nav";
+import { getRequest } from "../components/constants/ApiCall";
 
 export default function Home() {
   const [data, setData] = useState([]);
-  const fetchData = () => {
-    fetch(api_url + "/all/posts")
-      .then((res) => res.json())
-      .then((data) => setData(data));
+  const fetchData = async () => {
+   const res = await getRequest('/all/posts')
+   const resData = await res.json()
+   setData(resData)
   };
   // console.log('da', data)
 
@@ -80,7 +81,7 @@ export default function Home() {
             >
               {data.map((item, id) => (
                 <>
-                <Cards key={id} item={item} />
+                <Cards  key={id} item={item} />
                 </>
               ))}
             </div>

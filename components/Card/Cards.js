@@ -17,7 +17,7 @@ export default function Cards({item}) {
       image={item.post_image}
     />
     <CardContent>
-    <Link  href={'category/' + item.post_slug}>
+    <Link  href={`/category/${item.category}/${item.post_slug}`}>
     <Typography style={{cursor:'pointer'}} gutterBottom variant="h5" component="div">
         {item.post_title}
       </Typography>

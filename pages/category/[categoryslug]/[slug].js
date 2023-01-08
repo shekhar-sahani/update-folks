@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../../styles/AnimePage.module.css";
+import styles from "../../../styles/AnimePage.module.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { api_url } from "../../components/constants/constant";
+import { api_url } from "../../../components/constants/constant";
 import { useRouter } from "next/router";
-import { getRequest } from "../../components/constants/ApiCall";
-import Nav from "../../components/Navbar/Nav";
+import { getRequest } from "../../../components/constants/ApiCall";
+import Nav from "../../../components/Navbar/Nav";
 
 export default function PostDetails() {
   const router = useRouter();
@@ -77,7 +77,7 @@ export default function PostDetails() {
                   />
                 </div>
                 <div className={styles.card_text}>
-                  <Link href={`/category/${item.post_slug}`}>
+                  <Link href={`/category/${item.category}/${item.post_slug}`}>
                     <p>{item.post_title.substr(0, 46) }</p>
                   </Link>
                   <span> 2022</span>
