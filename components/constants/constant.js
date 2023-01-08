@@ -1,7 +1,3 @@
-// export const API_URL = 'http://127.0.0.1:8000'
+// export const api_url = 'http://127.0.0.1:8000'
 
-export const API_URL = 'https://scraper.updatefolks.link'
-
-
-
-
+export const api_url = 'https://scraper.updatefolks.link'

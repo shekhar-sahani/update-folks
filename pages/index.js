@@ -3,13 +3,14 @@ import Head from "next/head";
 import Cards from "../components/Card/Cards";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
-import { API_URL } from "../components/constants/constant";
 import { margin } from "@mui/system";
+import { api_url } from "../components/constants/constant";
+import Nav from "../components/Navbar/Nav";
 
 export default function Home() {
   const [data, setData] = useState([]);
   const fetchData = () => {
-    fetch(API_URL + "/all/posts")
+    fetch(api_url + "/all/posts")
       .then((res) => res.json())
       .then((data) => setData(data));
   };
@@ -49,13 +50,9 @@ export default function Home() {
 
       <main>
         <div className={styles.page}>
+          <Nav />
           <div>
-            <ul style={{listStyle:'none'}} >
-              <li >Update Folks</li>
-            </ul>
-          </div>
-          <div>
-            <div style={{position:'relative', height:'300px'}} >
+            <div className={styles.content_section} >
               <div  className={styles.content} >
               <h2
               >
@@ -82,7 +79,9 @@ export default function Home() {
               }}
             >
               {data.map((item, id) => (
+                <>
                 <Cards key={id} item={item} />
+                </>
               ))}
             </div>
           </div>

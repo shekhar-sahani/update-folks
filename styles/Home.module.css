@@ -6,6 +6,7 @@
   width: 90%;
   margin: 0 auto;
   padding-top: 20px;
+  margin-bottom: 30px;
 }
 
 .main {
@@ -157,7 +158,19 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+@media (max-width: 1200px) {
+  .content { 
+    position: relative;
+    text-align: center;
+    line-height: normal;
+  }
+  
+}
 
+.content_section {
+  position: relative;
+  height: 300px;
+}
 .content h2 {
   font-size: 50px;
 }

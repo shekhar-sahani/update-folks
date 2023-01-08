@@ -9,9 +9,8 @@ import Link from 'next/link';
 
 export default function Cards({item}) {
   return (
-    <Card  sx={{ maxWidth: 345  }}>
+    <Card  sx={{ maxWidth: 345, marginBottom:4  }}>
     <CardMedia
-    
       component="img"
       alt="green iguana"
       height="140"
@@ -28,10 +27,10 @@ export default function Cards({item}) {
         species, ranging across all continents except Antarctica
       </Typography> */}
     </CardContent>
-    <CardActions>
+    {/* <CardActions>
       <Button size="small">Share</Button>
       <Button size="small">Learn More</Button>
-    </CardActions>
+    </CardActions> */}
   </Card>
   )
 }

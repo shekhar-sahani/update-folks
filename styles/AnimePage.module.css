@@ -1,9 +1,10 @@
 
 
 .page {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding-top: 20px;
+    margin-bottom: 30px;
 }
 @media (max-width:600px) { 
     .page {
