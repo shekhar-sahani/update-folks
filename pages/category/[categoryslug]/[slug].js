@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import { getRequest } from "../../../components/constants/ApiCall";
 import Nav from "../../../components/Navbar/Nav";
 import Head from "next/head";
-import { Html } from "next/document";
 
 export default function PostDetails() {
   const router = useRouter();

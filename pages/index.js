@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Html } from "next/document";
 import Cards from "../components/Card/Cards";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
