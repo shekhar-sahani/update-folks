@@ -1,12 +1,11 @@
-import Image from "next/image";
 import React from "react";
 import styles from "../../../styles/AnimePage.module.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { api_url } from "../../../components/constants/constant";
 import { useRouter } from "next/router";
 import { getRequest } from "../../../components/constants/ApiCall";
 import Nav from "../../../components/Navbar/Nav";
+import Head from "next/head";
 
 export default function PostDetails() {
   const router = useRouter();
@@ -37,6 +36,29 @@ export default function PostDetails() {
     }
   }, [slug]);
   return (
+    <>
+    <Head>
+        <title>{data["post_title"]} - Update Folks</title>
+        <meta
+          name="google-site-verification"
+          content="pfzk24IbYS53h7fP868UIjlzjtUcIKxzeONE1BJPD8c"
+        />
+        <meta
+          name="description"
+          content="Latest News, Updates and recommendation for folks"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        <meta
+          name="keyword"
+          content="upcoming anime, upcoming anime 2023, upcoming anime january, new and upcoming anime, anime, hollywood movies, best hollywood movies 2022, top 10 hollywood movies of all time"
+        ></meta>
+        <meta name="author" content="updatefolks"></meta>
+        <link rel="icon" href="/starlord.png" />
+      </Head>
+   
     <div className={styles.page}>
       <Nav />
       <h1 className={styles.title}>{data["post_title"]} </h1>
@@ -87,5 +109,6 @@ export default function PostDetails() {
         </div>
       </div>
     </div>
+    </>
   );
 }
