@@ -60,11 +60,19 @@ export default function Data() {
         theme: "colored",
         });
     }
+
+    const handleTextArea = (e) => {
+      let name = e.target.name
+      let value = e.target.value.replace(/\r\n|\r|\n/g, "<br />")
+      setJson({...json, [name] : value})
+    }
   return (
     <>
     <ToastContainer />
     <div>
       <Modal setClose={setShow} modal_show={show} formData={formData} />
+    <div>
+      </div>  
       {/* Image Handle Section */}
       <div style={{position:'absolute', right:30}} > 
         {!showImageLinks ? <form >
@@ -100,7 +108,7 @@ export default function Data() {
       <div style={{marginTop:"10px", textAlign:"right"}} >
         {formData.length > 0 ? `Total Post Count: ${formData.length}` : ''}
     </div>
-        <label for="title" className={styles.formbold_form_label}> Title </label>
+        <label className={styles.formbold_form_label}> Title </label>
         <input
           type="text"
           name="title"
@@ -123,19 +131,19 @@ export default function Data() {
         />
       </div>
       <div className={styles.formbold_mb_5}>
-        <label for="message" className={styles.formbold_form_label}> Message </label>
+        <label  className={styles.formbold_form_label}> Message </label>
         <textarea
           rows="6"
           name="desc"
           value={json.desc}
-          onChange={handleFormData}
+          onChange={handleTextArea}
           placeholder="Type post description"
           className={styles.formbold_form_input}
         ></textarea>
       </div>
 
       <div style={{position:'relative'}} className={styles.formbold_mb_5}>
-        <label for="subject" className={styles.formbold_form_label}> Fall <small onClick={() => setDisable(!disable)}  style={{position:'absolute', right:0}} > <b> {disable ? 'Enable' : 'Disable'} Fall </b> </small> </label>
+        <label  className={styles.formbold_form_label}> Fall <small onClick={() => setDisable(!disable)}  style={{position:'absolute', right:0}} > <b> {disable ? 'Enable' : 'Disable'} Fall </b> </small> </label>
         <input
           type="text"
           name="fall"

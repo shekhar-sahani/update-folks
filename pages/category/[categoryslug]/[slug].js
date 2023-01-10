@@ -44,19 +44,18 @@ export default function PostDetails() {
         <div className={styles.content}>
           {data["post_data"]?.map((item, index) => (
             <div key={index}>
-              <h3>{item.title}</h3>
+              <h3> {index + 1}. {item.title}</h3>
               <img
                 alt="banner_image"
-                //  src={`/images/spring_2023/${index+1}.webp`}
-
                 src={item.image}
               />
-              <ul>
-                <li>
+              <ul style={{listStyle:'none'}} >
+                {item.fall ? <li>
                   <strong>Release Date:</strong> {item.fall}{" "}
-                </li>
-                <li>
-                  <strong>Description:</strong> {item.desc}{" "}
+                </li> : null}                
+                <li style={{fontSize:'18px', lineHeight:'28px'}} >   
+                  <div  dangerouslySetInnerHTML={{__html: item.desc}}>
+                    </div>                 
                 </li>
               </ul>
             </div>

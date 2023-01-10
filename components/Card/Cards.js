@@ -9,17 +9,18 @@ import Link from 'next/link';
 
 export default function Cards({item}) {
   return (
-    <Card  sx={{ maxWidth: 345, marginBottom:4}} className="mx-3 h-[350px]">
+    <Card  sx={{ maxWidth: 345, marginBottom:4}} className="mx-3 h-[360px]">
     <CardMedia
       component="img"
-      alt="green iguana"
+      alt="card images"
+      className="h-[177px]"
       height="140"
       image={item.post_image}
     />
     <CardContent>
     <Link  href={`/category/${item.category}/${item.post_slug}`}>
     <Typography style={{cursor:'pointer'}} gutterBottom variant="h5" component="div">
-        {item.post_title}
+        {item.post_title?.length > 85 ? item.post_title.substr(0, 85) + '...' : item.post_title }
       </Typography>
     </Link>
       {/* <Typography variant="body2" color="text.secondary">
