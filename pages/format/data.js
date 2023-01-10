@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { postRequest } from '../../components/constants/ApiCall'
 import styles from './format.module.css'
 import Modal from './Modal'
-export default function data() {
+export default function Data() {
     const [formData,  setFormData] = useState([])
     const [json, setJson] = useState({})
     const [show, setShow] = useState(false)
