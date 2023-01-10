@@ -38,7 +38,6 @@ export default function PostDetails() {
   }, [slug]);
   return (
     <>
-    <Html lang="en" >
     <Head>
         <title>{data["post_title"]} - Update Folks</title>
         <meta
@@ -111,7 +110,6 @@ export default function PostDetails() {
         </div>
       </div>
     </div>
-    </Html>
     </>
   );
 }

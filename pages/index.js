@@ -20,7 +20,6 @@ export default function Home() {
   }, []);
   return (
     <>
-    <Html lang='en'>
     <Head>
         <script
           async
@@ -79,7 +78,6 @@ export default function Home() {
         </div>
       </main>
     </div>
-    </Html>
     </>
   );
 }
