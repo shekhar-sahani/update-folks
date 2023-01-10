@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Html } from "next/document";
 import Cards from "../components/Card/Cards";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
@@ -19,6 +20,7 @@ export default function Home() {
   }, []);
   return (
     <>
+    <Html lang='en'>
     <Head>
         <script
           async
@@ -46,8 +48,6 @@ export default function Home() {
         <link rel="icon" href="/starlord.png" />
       </Head>
     <div className={styles.container}>
-      
-
       <main>
         <div className={styles.page}>
           <Nav />
@@ -79,6 +79,7 @@ export default function Home() {
         </div>
       </main>
     </div>
+    </Html>
     </>
   );
 }
