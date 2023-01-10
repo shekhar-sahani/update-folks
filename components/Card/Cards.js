@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 export default function Cards({item}) {
   return (
-    <Card  sx={{ maxWidth: 345, marginBottom:4  }}>
+    <Card  sx={{ maxWidth: 345, marginBottom:4}} className="mx-3 h-[350px]">
     <CardMedia
       component="img"
       alt="green iguana"

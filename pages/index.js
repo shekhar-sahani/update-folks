@@ -60,11 +60,12 @@ export default function Home() {
                 Welcome To Update Folks
               </h2>
               <p
-                style={{
-                  position: "relative",
-                  textAlign: "center",
-                  fontSize:'25px'
-                }}
+              className="relative text-center text-2xl"
+                // style={{
+                //   position: "relative",
+                //   textAlign: "center",
+                //   fontSize:'25px'
+                // }}
               >
                 Feel Free To View This Amazing Posts
               </p>
@@ -72,12 +73,12 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.wrapper}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                flexWrap: "wrap",
-              }}
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1"
+              // style={{
+              //   display: "flex",
+              //   justifyContent: "space-around",
+              //   flexWrap: "wrap",
+              // }}
             >
               {data.map((item, id) => (
                 <>

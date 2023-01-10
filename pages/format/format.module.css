@@ -1,0 +1,178 @@
+.formbold_mb_5 {
+    margin-bottom: 20px;
+  }
+  .formbold_pt_3 {
+    padding-top: 12px;
+  }
+  .formbold_main_rapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold_form_wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+  .formbold_form_label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+  }
+  .formbold_form_label_2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .formbold_form_input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+  }
+  .formbold_form_input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold_btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+  }
+  .formbold_btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold_btn_add {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    margin-left: 20px;
+    font-weight: 600;
+    background-color: #91120b;
+    color: white;
+    cursor: pointer;
+  }
+  .formbold_btn_add:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold__mx_3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold_px_3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex_wrap {
+    flex-wrap: wrap;
+  }
+  .w_full {
+    width: 100%;
+  }
+  @media (min-width: 540px) {
+    .sm\:w_half {
+      width: 50%;
+    }
+  }
+
+  /* Modal Code */
+
+
+  .modal_window:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal_window > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: rgb(223, 108, 108);
+    transition: all 0.3s;
+    z-index: 99999;
+
+  }
+  .modal_window header {
+    font-weight: bold;
+  }
+  .modal_window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+  }
+  
+  .modal_close {
+    color: rgb(41, 40, 40);
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+  }
+  .modal_close:hover {
+    color: black;
+  }
+
+
+  
+  /* .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  
+  .modal_window > div {
+    border-radius: 1rem;
+  }
+  
+  .modal_window div:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  
+  .logo {
+    max-width: 150px;
+    display: block;
+  }
+
+  
+  .btn {
+    background-color: white;
+    padding: 1em 1.5em;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  .btn i {
+    padding-right: 0.3em;
+  }

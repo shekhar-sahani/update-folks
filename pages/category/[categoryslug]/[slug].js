@@ -76,11 +76,11 @@ export default function PostDetails() {
                     alt={item.alt}
                   />
                 </div>
-                <div className={styles.card_text}>
+                <div style={{cursor:'pointer'}} className={styles.card_text}>
                   <Link href={`/category/${item.category}/${item.post_slug}`}>
                     <p>{item.post_title.substr(0, 46) }</p>
                   </Link>
-                  <span> 2022</span>
+                  <span> posted on {new Date(item.created_time).toLocaleDateString()} </span>
                 </div>
               </div>
             </div>
